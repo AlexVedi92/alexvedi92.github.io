@@ -16,34 +16,81 @@
     </style>
 </head>
 <body>
-    <div id="div_lang">
-        <form>
-            <select id="select_lang">
-                <option value="fr">Français</option>
-                <option value="en">English</option>
-                <option value="greek">ελληνικά</option>
-            </select>
-        </form>
+    <div id="titre_langue">
+        <!-- Titre -->
+        <h1 lang="fr">AGORA - ATHENES</h1>
+        <h1 lang="en">AGORA - ATHENS</h1>
+        <h1 lang="gr">ΑΓΟΡΑ - ΑΘΗΝΑ</h1>
+        <h1 lang="es">ÁGORA - ATENAS</h1>
+        <h1 lang="cn">雅典市集</h1>
+        <h1 lang="nl">AGORA - ATHENE</h1>
+
+        <!-- Barre de langues -->
+        <div class="langues">
+            <button data-lang="fr">🇫🇷 FR</button>
+            <button data-lang="en">🇬🇧 EN</button>
+            <button data-lang="gr">🇬🇷 GR</button>
+            <button data-lang="es">🇪🇸 ES</button>
+            <button data-lang="cn">🇨🇳 CN</button>
+            <button data-lang="nl">🇳🇱 NL</button>
+        </div>
     </div>
 
-    <h1 lang="fr">Bienvenue</h1>
-    <h1 lang="en">Welcome</h1>
-    <h1 lang="greek">Καλώς ήρθατε</h1>
+    <h1 lang="fr">Titre lieu</h1>
+    <h1 lang="en">Site name</h1>
+    <h1 lang="gr">Τίτλος τοποθεσίας</h1>
+    <h1 lang="es">Título del lugar</h1>
+    <h1 lang="cn">地点标题</h1>
+    <h1 lang="nl">Titel van de plaats</h1>
+
+    <div id="deux-images">
+        <img src="img/test.png" alt="">
+        <img src="img/test.png" alt="">
+    </div>
+
+
+    <details>
+        <summary>Texte</summary>
+        <div class="content">
+            <p lang="fr">FR</p>
+            <p lang="en">EEN</p>
+            <p lang="gr">GR</p>
+            <p lang="es">ES</p>
+            <p lang="cn">CN</p>
+            <p lang="nl">NL</p>
+
+        </div>
+    </details>
+
+    <details>
+        <summary>Audioguide</summary>
+        <div class="content">
+            <p lang="fr">FR</p>
+            <p lang="en">EEN</p>
+            <p lang="gr">GR</p>
+            <p lang="es">ES</p>
+            <p lang="cn">CN</p>
+            <p lang="nl">NL</p>
+
+        </div>
+    </details>
 
     <script>
-        const selectLang = document.getElementById("select_lang");
+        const buttons = document.querySelectorAll(".langues button");
 
-        selectLang.addEventListener("change", function() {
-            const chosenLang = this.value;
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const chosenLang = btn.dataset.lang;
 
-            // Cacher toutes les langues
-            document.querySelectorAll("[lang]").forEach(el => {
-                el.style.display = "none";
-            });
+                // Cacher toutes les langues
+                document.querySelectorAll("[lang]").forEach(el => {
+                    el.style.display = "none";
+                });
 
-            // Afficher uniquement la langue choisie
-            document.querySelectorAll(`[lang='${chosenLang}']`).forEach(el => {
-                el.style.display = "block";
+                // Afficher la langue choisie
+                document.querySelectorAll(`[lang='${chosenLang}']`).forEach(el => {
+                    el.style.display = "block";
+                });
             });
         });
     </script>
