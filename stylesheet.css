@@ -8,6 +8,7 @@ div#titre_langue{
 div.langues button{
     background-color:#b00b69;
     color:aliceblue;
+    vertical-align: middle;
     font-size: 24px;
     margin: 0 4px 0 4px;
 }
@@ -15,6 +16,20 @@ div.langues button{
 div.langues button:hover {
     background-color: white;
     color: #b00b69;
+}
+
+div.langues button.active {
+    background-color: white;
+    color: #b00b69;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+div.langues button img {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 6px;
 }
 
 div#deux-images{
@@ -25,7 +40,6 @@ div#deux-images img{
     margin-left: 5%;
     margin-right: 5%;
 }
-
 
 details {
     width: 80%;
@@ -44,10 +58,6 @@ summary {
     outline: none;
 }
 
-/* retirer la flèche par défaut (optionnel) */
-summary::-webkit-details-marker { display:none; }
-summary::marker { content: ""; }
-
 /* contenu masqué/animé */
 details.content {
     overflow: hidden;
@@ -62,32 +72,7 @@ details[open] .content {
     padding-bottom: 12px;
 }
 
-
-
-
 h1{
     font-size : 36px;
     text-align: center;
     }
-
-/* --- Style du tableau --- */
-table {
-    border-collapse: collapse; /* fusionne les bordures doubles */
-    width: 60%; /* optionnel : ajuste la largeur */
-    margin: 20px auto; /* centre le tableau */
-}
-
-th, td {
-    border: 1px solid #333; /* bordure noire */
-    padding: 10px;          /* espace intérieur */
-    text-align: left;       /* aligne le texte */
-}
-
-tr:nth-child(even) {
-    background-color: #e9e9e9; /* zébrage léger */
-}
-
-img {
-    max-width: 35%; /* limite la taille de l’image */
-    height: auto;
-}

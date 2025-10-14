@@ -27,12 +27,12 @@
 
         <!-- Barre de langues -->
         <div class="langues">
-            <button data-lang="fr">🇫🇷 FR</button>
-            <button data-lang="en">🇬🇧 EN</button>
-            <button data-lang="gr">🇬🇷 GR</button>
-            <button data-lang="es">🇪🇸 ES</button>
-            <button data-lang="cn">🇨🇳 CN</button>
-            <button data-lang="nl">🇳🇱 NL</button>
+            <button data-lang="fr"><img src="img/Flag_of_France.svg.webp" alt=""> FR</button>
+            <button data-lang="en"><img src="img/Flag_of_the_UK.png" alt=""> EN</button>
+            <button data-lang="gr"><img src="img/Flag_of_Greece.png" alt=""> GR</button>
+            <button data-lang="es"><img src="img/Flag_of_Spain.png" alt=""> ES</button>
+            <button data-lang="cn"><img src="img/Flag_of_China.png" alt=""> CN</button>
+            <button data-lang="nl"><img src="img/Flag_of_the_Netherlands.png" alt=""> NL</button>
         </div>
     </div>
 
@@ -44,7 +44,7 @@
     <h1 lang="nl">Titel van de plaats</h1>
 
     <div id="deux-images">
-        <img src="img/test.png" alt="">
+        <img src="img/Flag_of_France.svg.webp" alt="">
         <img src="img/test.png" alt="">
     </div>
 
@@ -63,14 +63,12 @@
 
     <details>
         <summary>Audioguide</summary>
-        <div class="content">
             <p lang="fr">FR</p>
             <p lang="en">EN</p>
             <p lang="gr">GR</p>
             <p lang="es">ES</p>
             <p lang="cn">CN</p>
             <p lang="nl">NL</p>
-        </div>
     </details>
 
     <details>
@@ -91,16 +89,18 @@
         buttons.forEach(btn => {
             btn.addEventListener("click", () => {
                 const chosenLang = btn.dataset.lang;
-
-                // Cacher toutes les langues
+                // cacher toutes les langues
                 document.querySelectorAll("[lang]").forEach(el => {
-                    el.style.display = "none";
+                  el.style.display = "none";
                 });
-
-                // Afficher la langue choisie
+                // afficher la langue choisie
                 document.querySelectorAll(`[lang='${chosenLang}']`).forEach(el => {
-                    el.style.display = "block";
+                  el.style.display = "block";
                 });
+                // retirer la classe active de tous les boutons
+                buttons.forEach(b => b.classList.remove("active"));
+                // ajouter la classe active au bouton cliqué
+                btn.classList.add("active");
             });
         });
     </script>
