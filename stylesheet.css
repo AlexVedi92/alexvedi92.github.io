@@ -1,0 +1,15 @@
+div#div_lang{
+    background-color: #b00b69;
+    padding-bottom: 3%;
+    text-align: right;
+}
+
+select#select_lang{
+    background-color:#b00b69;
+    color:aliceblue;
+    font-size: 24px;
+}
+
+h1{
+    font: size 24px;
+}

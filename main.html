@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>    
+    <title>Médiation Lola</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        /* Optionnel : cacher toutes les langues au départ */
+        [lang] {
+            display: none;
+        }
+        /* Afficher la langue française par défaut */
+        [lang="fr"] {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="div_lang">
+        <form>
+            <select id="select_lang">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+                <option value="greek">ελληνικά</option>
+            </select>
+        </form>
+    </div>
+
+    <h1 lang="fr">Bienvenue</h1>
+    <h1 lang="en">Welcome</h1>
+    <h1 lang="greek">Καλώς ήρθατε</h1>
+
+    <script>
+        const selectLang = document.getElementById("select_lang");
+
+        selectLang.addEventListener("change", function() {
+            const chosenLang = this.value;
+
+            // Cacher toutes les langues
+            document.querySelectorAll("[lang]").forEach(el => {
+                el.style.display = "none";
+            });
+
+            // Afficher uniquement la langue choisie
+            document.querySelectorAll(`[lang='${chosenLang}']`).forEach(el => {
+                el.style.display = "block";
+            });
+        });
+    </script>
+</body>
+</html>
