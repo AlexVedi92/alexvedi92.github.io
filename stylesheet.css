@@ -46,7 +46,6 @@ details {
     margin: 1rem auto;
     border: 1px solid #ddd;
     border-radius: 6px;
-    padding: 0.2rem;
     background: #fff;
 }
 
@@ -70,6 +69,13 @@ details.content {
 details[open] .content {
     max-height: 800px; /* suffisamment grand pour le contenu */
     padding-bottom: 12px;
+    
+}
+
+details[open] p {
+    text-justify: inter-word;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 h1{
