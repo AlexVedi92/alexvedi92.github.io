@@ -26,10 +26,10 @@ div.langues button.active {
 }
 
 div.langues button img {
-  width: 24px;
-  height: auto;
-  vertical-align: middle;
-  margin-right: 6px;
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 6px;
 }
 
 div#deux-images{
