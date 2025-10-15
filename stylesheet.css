@@ -39,6 +39,7 @@ div#deux-images{
 div#deux-images img{
     margin-left: 5%;
     margin-right: 5%;
+    max-width: 35%;
 }
 
 details {
