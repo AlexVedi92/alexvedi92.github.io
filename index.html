@@ -155,17 +155,21 @@
                 const chosenLang = btn.dataset.lang;
                 // cacher toutes les langues
                 document.querySelectorAll("[lang]").forEach(el => {
-                  el.style.display = "none";
+                    el.style.display = "none";
                 });
                 // afficher la langue choisie
                 document.querySelectorAll(`[lang='${chosenLang}']`).forEach(el => {
-                  el.style.display = "block";
+                    el.style.display = "block";
                 });
                 //Mettre en pause les audios
                 document.querySelectorAll("audio").forEach(audio => {
-                  audio.pause();
-                  audio.currentTime=0;
+                    audio.pause();
+                    audio.currentTime=0;
                 });
+                //Fermer les détails des boîtes summary
+                document.querySelectorAll("details").forEach(details => {
+                    details.open=false;
+                })
                 // retirer la classe active de tous les boutons
                 buttons.forEach(b => b.classList.remove("active"));
                 // ajouter la classe active au bouton cliqué
