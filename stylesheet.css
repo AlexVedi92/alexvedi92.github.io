@@ -1,27 +1,28 @@
 div#titre_langue{
-    background-color: #b00b69;
+    background-color: #23427c;
+    color:white;
     padding-bottom: 5px;
     padding-top: 5px;
     text-align: center;
 }
 
 div.langues button{
-    background-color:#b00b69;
-    color:aliceblue;
+    background-color:white;
+    color:#23427c;
     vertical-align: middle;
     font-size: 24px;
     margin: 0 4px 0 4px;
 }
 
+/*Inutile*/
 div.langues button:hover {
     background-color: white;
-    color: #b00b69;
+    color: #23427c;
 }
 
 div.langues button.active {
     background-color: white;
-    color: #b00b69;
-    border: 2px solid white;
+    color: #23427c;
     font-weight: bold;
 }
 
